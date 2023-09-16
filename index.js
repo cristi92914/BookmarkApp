@@ -14,6 +14,7 @@ button.addEventListener("click", (e) => {
   if (!nameValue || !siteValue) return;
 
   const newDiv = document.createElement("div");
+  const newP = document.createElement("p");
   const buttonDelete = document.createElement("button");
   const buttonVisit = document.createElement("button");
   buttonDelete.textContent = "delete";
@@ -27,10 +28,11 @@ button.addEventListener("click", (e) => {
     window.location.href = siteValue;
   });
 
-  newDiv.textContent = nameValue;
+  newP.textContent = nameValue;
   site.value = "";
   name.value = "";
   bookmarks.appendChild(newDiv);
+  newDiv.appendChild(newP);
   newDiv.appendChild(buttonDelete);
   newDiv.appendChild(buttonVisit);
 });

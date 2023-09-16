@@ -22,6 +22,8 @@ form {
   align-items: center;
   background-color: aliceblue;
   margin: auto;
+  width: 80%;
+  height: 20vh;
 }
 
 body {
@@ -45,7 +47,19 @@ footer {
   margin: 10px;
 }
 
+#bookmarks div p {
+  margin-right: 10px;
+}
+
+#bookmarks div button {
+  height: 80%;
+  margin: auto 0;
+}
+
 #bookmarks div {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  background-color: aliceblue;
+  margin-top: 10px;
+  width: 80%;
 }
