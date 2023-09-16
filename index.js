@@ -14,16 +14,23 @@ button.addEventListener("click", (e) => {
   if (!nameValue || !siteValue) return;
 
   const newDiv = document.createElement("div");
-  const button = document.createElement("button");
-  button.textContent = "delete";
+  const buttonDelete = document.createElement("button");
+  const buttonVisit = document.createElement("button");
+  buttonDelete.textContent = "delete";
+  buttonVisit.textContent = "visit";
 
-  button.addEventListener("click", (e) => {
+  buttonDelete.addEventListener("click", (e) => {
     e.currentTarget.parentElement.remove();
   });
 
-  newDiv.textContent = nameValue + "  --> " + siteValue;
+  buttonVisit.addEventListener("click", (e) => {
+    window.location.href = siteValue;
+  });
+
+  newDiv.textContent = nameValue;
   site.value = "";
   name.value = "";
   bookmarks.appendChild(newDiv);
-  newDiv.appendChild(button);
+  newDiv.appendChild(buttonDelete);
+  newDiv.appendChild(buttonVisit);
 });
