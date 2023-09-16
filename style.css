@@ -6,9 +6,7 @@
 }
 
 header {
-  /* height: 30%; */
   padding: 20px;
-  /* padding-bottom: 20%; */
 }
 
 main {
@@ -37,6 +35,8 @@ footer {
 
 #bookmarks {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 10px;
 }
