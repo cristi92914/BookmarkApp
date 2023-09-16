@@ -7,7 +7,15 @@ button.addEventListener("click", (e) => {
   e.preventDefault();
   const nameValue = name.value;
   const siteValue = site.value;
-  const newP = document.createElement("p");
-  newP.textContent = nameValue + "  --> " + siteValue;
-  bookmarks.appendChild(newP);
+  const newDiv = document.createElement("div");
+  const button = document.createElement("button");
+  button.textContent = "delete";
+
+  button.addEventListener("click", (e) => {
+    e.currentTarget.parentElement.remove();
+  });
+
+  newDiv.textContent = nameValue + "  --> " + siteValue;
+  bookmarks.appendChild(newDiv);
+  newDiv.appendChild(button);
 });
