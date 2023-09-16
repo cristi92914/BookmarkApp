@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  /* height: 30%; */
+  padding: 20px;
+  /* padding-bottom: 20%; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  padding-left: 20px;
+  /* margin-top: 20%; */
+}
+
+#bookmarks {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
