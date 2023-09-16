@@ -2,11 +2,17 @@ const button = document.querySelector("button");
 const name = document.getElementById("name");
 const site = document.getElementById("site");
 const bookmarks = document.getElementById("bookmarks");
+const form = document.querySelector("form");
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
+  form.reportValidity();
+
   const nameValue = name.value;
   const siteValue = site.value;
+
+  if (!nameValue || !siteValue) return;
+
   const newDiv = document.createElement("div");
   const button = document.createElement("button");
   button.textContent = "delete";
@@ -16,6 +22,8 @@ button.addEventListener("click", (e) => {
   });
 
   newDiv.textContent = nameValue + "  --> " + siteValue;
+  site.value = "";
+  name.value = "";
   bookmarks.appendChild(newDiv);
   newDiv.appendChild(button);
 });
